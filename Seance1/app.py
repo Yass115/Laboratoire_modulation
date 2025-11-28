@@ -48,10 +48,14 @@ Cette application a pour objectif d’offrir un support clair, interactif et pé
 la chaîne complète *signal continu → échantillonnage → reconstruction*.
 
 """)
+import os
+st.write("Chemin actuel :", os.getcwd())
+st.write("Contenu du dossier :", os.listdir())
 with open("labo_mod1.pdf", "rb") as pdf_file:
     st.download_button(
         label="Télécharger le rapport de labo (PDF)",
         data=pdf_file,
         file_name="labo_mod1.pdf",
         mime="application/pdf"
+
     )
